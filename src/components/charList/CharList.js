@@ -1,4 +1,6 @@
 import {useState, useEffect, useRef} from 'react';
+import PropTypes from 'react';
+
 import Spinner from '../spinner/Spinner';
 import ErrorMessage from '../errorMessage/ErrorMessage';
 import MarvelService from '../../services/MarvelService';
@@ -120,5 +122,9 @@ const CharList = (props) => {
             </div>
         )
 }     
+
+    CharList.propTypes = {
+        onCharSelected: PropTypes.func.isRequired
+    }
 
 export default CharList;
