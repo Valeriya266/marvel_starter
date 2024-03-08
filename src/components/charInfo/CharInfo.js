@@ -1,4 +1,5 @@
-import {useState, useEffect, useRef} from 'react';
+import {useState, useEffect} from 'react';
+import PropTypes from 'prop-types';
 
 import MarvelService from '../../services/MarvelService';
 import Spinner from '../spinner/Spinner';
@@ -15,9 +16,9 @@ const CharInfo = (props) => {
 
     const marvelService = new MarvelService();
 
-    useEffect((charId) => {
+    useEffect(() => {
         updateChar();
-    });
+    }, [props.charId]);
 
     const updateChar = () => {
         const {charId} = props;
@@ -33,9 +34,9 @@ const CharInfo = (props) => {
             .catch(onError);   
     }
 
-    const onCharLoaded = () => {
+    const onCharLoaded = (char) => {
         setLoading(false);
-        setChar();
+        setChar(char);
     }
 
     const onCharLoading = () => {
@@ -48,9 +49,9 @@ const CharInfo = (props) => {
     }
 
     const skeleton = char || loading || error ? null : <Skeleton/>;
-        const errorMessage = error ? <ErrorMessage/> : null;
-        const spinner = loading ? <Spinner/> : null;
-        const content = !(loading || error || !char) ? <View char={char}/> : null;
+    const errorMessage = error ? <ErrorMessage/> : null;
+    const spinner = loading ? <Spinner/> : null;
+    const content = !(loading || error || !char) ? <View char={char}/> : null;
 
 
         return (
@@ -106,6 +107,10 @@ const View = ({char}) => {
             </ul>
         </>
     )
+}
+
+CharInfo.propTypes = {
+    charId: PropTypes.number
 }
 
 export default CharInfo;
