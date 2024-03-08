@@ -49,10 +49,6 @@ const CharList = (props) => {
     }
 
     const onError = () => {
-        this.setState({
-            loading: false,
-            error: true
-        })
         setError(true);
         setLoading(loading => false),
     }
