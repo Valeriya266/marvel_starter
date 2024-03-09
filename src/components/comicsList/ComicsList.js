@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import PropTypes from 'react';
 
 import Spinner from '../spinner/Spinner';
 import ErrorMessage from '../errorMessage/ErrorMessage';
@@ -22,7 +21,7 @@ const ComicsList = () => {
 
     const onRequest = (offset, initial) => {
         initial ? setnewItemLoading(false) : setnewItemLoading(true);
-        getAllComics()
+        getAllComics(offset)
             .then(onComicsListLoaded)
     }
 
@@ -79,10 +78,6 @@ const ComicsList = () => {
                 </button>
             </div>
         )
-}
-
-ComicsList.propTypes = {
-    onComicsSelected: PropTypes.func.isRequired
 }
 
 export default ComicsList;
