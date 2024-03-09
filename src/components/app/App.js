@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {MainPage, ComicsPage} from '../pages';
 import AppHeader from "../appHeader/AppHeader";
 
 const App = () => {
@@ -10,10 +11,10 @@ const App = () => {
                 <main>
                     <Switch>
                         <Route path="/">
-                            
+                            <MainPage/>
                         </Route>
                         <Route path="/comics">
-                          
+                            <ComicsPage/>
                         </Route>
                     </Switch>                    
                 </main>
