@@ -26,7 +26,7 @@ const App = () => {
                 <AppHeader/>
                 <main>
                     <Switch>
-                        <Route exact path="/">
+                        <Route path="/">
                             <ErrorBoundary>
                                 <RandomChar/>
                             </ErrorBoundary>
@@ -40,7 +40,7 @@ const App = () => {
                             </div>
                             <img className="bg-decoration" src={decoration} alt="vision"/>
                         </Route>
-                        <Route exact path="/comics">
+                        <Route path="/comics">
                             <AppBanner/>
                             <ComicsList/>
                         </Route>
