@@ -80,7 +80,8 @@ const View = ({char}) => {
                 {comics.length > 0 ? null : 'There is no comics with this Hero!'}
                 {
                     comics.map((item, i) => {
-                        if (i < 10) 
+                        // eslint-disable-next-line
+                        if (i > 9) return;
                         return (
                             <li key={i} className="char__comics-item">
                                 {item.name}
