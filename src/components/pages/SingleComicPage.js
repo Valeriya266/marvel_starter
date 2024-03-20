@@ -1,13 +1,13 @@
 import {useParams, Link} from 'react-router-dom';
 import {useState, useEffect} from 'react';
-import PropTypes from 'prop-types';
 
 import useMarvelService from '../../services/MarvelService';
 import Spinner from '../spinner/Spinner';
 import ErrorMessage from '../errorMessage/ErrorMessage';
+import AppBanner from "../appBanner/AppBanner";
 
 import './singleComicPage.scss';
-import xMen from '../../resources/img/x-men.png';
+
 
 const SingleComicPage = () => {
     const {comicId} = useParams();
@@ -19,15 +19,14 @@ const SingleComicPage = () => {
     }, [comicId]);
 
     const updateComic = () => {
-
-
         clearError();    
         getComic(comicId)
-            .then(onCharLoaded)   
+            .then(onComicLoaded)   
     }
 
     const onComicLoaded = (comic) => {
         setComic(comic);
+    }    
 
     const errorMessage = error ? <ErrorMessage/> : null;
     const spinner = loading ? <Spinner/> : null;
@@ -35,6 +34,7 @@ const SingleComicPage = () => {
 
     return (
         <>
+            <AppBanner/>
             {errorMessage}
             {spinner}
             {content}
