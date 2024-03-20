@@ -1,7 +1,11 @@
+import {useParams, Link} from 'react-router-dom';
+
 import './singleComicPage.scss';
 import xMen from '../../resources/img/x-men.png';
 
 const SingleComicPage = () => {
+    const {comicId} = useParams();
+
     return (
         <div className="single-comic">
             <img src={xMen} alt="x-men" className="single-comic__img"/>
