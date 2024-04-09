@@ -1,5 +1,5 @@
 import useMarvelService from '../../services/MarvelService';
-import { Formik, Field, Form, ErrorMessage, useField } from 'formik';
+import { Formik, Form} from 'formik';
 import * as Yup from 'yup';
 
 import './charSearchForm.scss';
@@ -17,17 +17,17 @@ const CharSearchForm = () => {
         })}
         onSubmit = {values => console.log(JSON.stringify(values, null, 2))}
         >
-        <Form className="form">
-                <h2>Отправить пожертвование</h2>
-                <MyTextInput
-                    label="Ваше имя"
-                    id="name"
-                    name="name"
-                    type="text"
-                    autoComplete="off"
-                />  
-                <button type="submit">Отправить</button>
-        </Form>
+            <Form className="form">
+                    <h2>Or find a character by name:</h2>
+                    <MyTextInput
+                        label="Enter name"
+                        id="name"
+                        name="name"
+                        type="text"
+                        autoComplete="off"
+                    />  
+                    <button type="submit">FIND</button>
+            </Form>
         </Formik>
     )          
 }
