@@ -11,6 +11,7 @@ const setContent = (process, Component, newItemLoading) => {
     switch (process) {
         case 'waiting': 
             return <Spinner/>;
+            break;
         case 'loading':
             return newItemLoading ? <Component/> : <Spinner/>;
             break;
