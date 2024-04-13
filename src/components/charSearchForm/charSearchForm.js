@@ -1,6 +1,9 @@
-import useMarvelService from '../../services/MarvelService';
-import { Formik, Form} from 'formik';
+import { useState } from 'react';
+import {Formik, Form, Field, ErrorMessage as FormikErrorMessage} from 'formik';
 import * as Yup from 'yup';
+
+import useMarvelService from '../../services/MarvelService';
+import { ErrorMessage } from '../../services/MarvelService';
 
 import './charSearchForm.scss';
 
