@@ -1,4 +1,5 @@
 {
+  "homepage": "https://valeriya266.github.io/marvel_starter",
   "name": "marvel",
   "version": "0.1.0",
   "private": true,
@@ -17,6 +18,8 @@
     "yup": "^1.4.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
@@ -41,6 +44,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^6.2.0",
     "sass": "^1.38.0"
   }
 }
