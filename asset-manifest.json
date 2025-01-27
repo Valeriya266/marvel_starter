@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/marvel_starter/static/css/main.79becdea.css",
-    "main.js": "/marvel_starter/static/js/main.62138934.js",
+    "main.js": "/marvel_starter/static/js/main.e699b052.js",
     "static/js/825.4fd67e8c.chunk.js": "/marvel_starter/static/js/825.4fd67e8c.chunk.js",
     "static/css/667.3657c92e.chunk.css": "/marvel_starter/static/css/667.3657c92e.chunk.css",
     "static/js/667.3149eb9b.chunk.js": "/marvel_starter/static/js/667.3149eb9b.chunk.js",
@@ -22,7 +22,7 @@
     "static/media/Avengers_logo.png": "/marvel_starter/static/media/Avengers_logo.9eaf219344d83362e830.png",
     "index.html": "/marvel_starter/index.html",
     "main.79becdea.css.map": "/marvel_starter/static/css/main.79becdea.css.map",
-    "main.62138934.js.map": "/marvel_starter/static/js/main.62138934.js.map",
+    "main.e699b052.js.map": "/marvel_starter/static/js/main.e699b052.js.map",
     "825.4fd67e8c.chunk.js.map": "/marvel_starter/static/js/825.4fd67e8c.chunk.js.map",
     "667.3657c92e.chunk.css.map": "/marvel_starter/static/css/667.3657c92e.chunk.css.map",
     "667.3149eb9b.chunk.js.map": "/marvel_starter/static/js/667.3149eb9b.chunk.js.map",
@@ -39,6 +39,6 @@
   },
   "entrypoints": [
     "static/css/main.79becdea.css",
-    "static/js/main.62138934.js"
+    "static/js/main.e699b052.js"
   ]
 }
